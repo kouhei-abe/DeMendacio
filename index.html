@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <script src="https://unpkg.com/mirador@latest/dist/mirador.min.js"></script>
+</head>
+<html>
+    <body>
+        <div id="my-mirador"/> 
+        <script type="text/javascript">
+        var mirador = Mirador.viewer({
+          id: "my-mirador",
+          window: 
+            {
+                defaultView: "single",
+                views: [
+                    { key: "single", behaviors: ["indivisuals"]},
+                    { key: 'gallery' }
+                ]
+            },
+          windows: [
+                {
+                    $comment: "Regius. Bnf Latin 1924",
+                    loadedManifest: "https://gallica.bnf.fr/iiif/ark:/12148/btv1b10037042j/manifest.json",
+                    canvasIndex: 160,
+                    thumbnailNavigationPosition: "far-right"
+                },               
+                {
+                    $comment: "Sangermanensis. Bnf Latin 13366",
+                    loadedManifest: "https://gallica.bnf.fr/iiif/ark:/12148/btv1b10036586j/manifest.json",
+                    canvasIndex: 2,
+                    thumbnailNavigationPosition: "far-right"
+                },
+                {
+                    $comment: "Monacensis. München BSB Clm. 14431",
+                    loadedManifest: "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb00046468/manifest",
+                    canvasIndex: 130,
+                    thumbnailNavigationPosition: "far-right"
+                }
+            ]
+        });
+        </script> 
+    </body>
+</html>
